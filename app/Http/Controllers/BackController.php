@@ -16,7 +16,14 @@ class BackController extends Controller
 {
     public function index()
     {
-        return view('dashboard.index');
+        $product = Product::all()->count();
+        $transaction = Transactiondetail::all()->count();
+        $user = Login::all()->count();
+        return view('dashboard.index', [
+            'product' => $product,
+            'transaction' => $transaction,
+            'user' => $user,
+        ]);
     }
 
     public function daftar_akun()
