@@ -18,6 +18,8 @@ Route::post('/logout', [BackController::class, 'logout'])->name('logout');
 Route::group(['prefix' => '/dashboard', 'middleware' => 'ceklogin'], function () {
     // DASHBOARD ROUTE
     Route::get('/', [BackController::class, 'index'])->name('dashboard');
+    Route::get('/product-list', [BackController::class, 'product_list'])->name('admin-product-list');
+    Route::get('/transaction-list', [BackController::class, 'transaction_list'])->name('admin-transaction-list');
 });
 Route::group(['prefix' => '/', 'middleware' => 'cekloginclient'], function () {
     // DASHBOARD ROUTE

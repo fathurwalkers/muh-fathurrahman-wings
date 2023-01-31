@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
 use Faker\Factory as Faker;
 use Illuminate\Support\Arr;
 use App\Models\Login;
+use App\Models\Product;
+use App\Models\Transactiondetail;
 
 class BackController extends Controller
 {
@@ -26,6 +28,22 @@ class BackController extends Controller
         return view('dashboard.daftar-akun', [
             'users' => $users,
             'akun' => $akun,
+        ]);
+    }
+
+    public function product_list()
+    {
+        $product = Product::all();
+        return view('dashboard.product-list', [
+            'product' => $product
+        ]);
+    }
+
+    public function transaction_list()
+    {
+        $transaction = Transactiondetail::all();
+        return view('dashboard.transaction-list', [
+            'transaction' => $transaction
         ]);
     }
 

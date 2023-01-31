@@ -37,7 +37,7 @@
             </a>
         </div>
 
-        <div class="col-10 mb-4 btn shadow">
+        {{-- <div class="col-10 mb-4 btn shadow">
             <a href="#">
                 <div class="card border-warning  ">
                     <div class="card-body text-left">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> --}}
 
         <div class="col-10 mb-4 btn shadow">
             <a href="#">

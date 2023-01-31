@@ -63,9 +63,6 @@
                             @endforeach
                             @php
                                 $implode_array_product = implode(",", $array_product2);
-                                // dump($array_product2);
-                                // dump($implode_array_product);
-                                // die;
                             @endphp
                             <form action="{{ route('proses-checkout', $implode_array_product) }}" method="POST">
                                 @csrf

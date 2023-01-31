@@ -86,5 +86,6 @@ class HomeController extends Controller
             ]);
             $save_transaction_detail->save();
         }
+        return redirect()->route('home')->with('status', 'Produk telah berhasil di beli. ');
     }
 }
