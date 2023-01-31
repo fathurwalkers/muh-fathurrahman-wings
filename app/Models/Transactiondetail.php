@@ -4,17 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Transactiondetail;
+use App\Models\Product;
 
-class Product extends Model
+class Transactiondetail extends Model
 {
     use HasFactory;
-    protected $table = "product";
+    protected $table = "transaction_detail";
     protected $guarded = [];
     protected $primaryKey = "id";
 
-    public function transaction_detail()
+    public function product()
     {
-        return $this->hasMany(Transactiondetail::class);
+        return $this->belongsTo(Product::class);
     }
 }
