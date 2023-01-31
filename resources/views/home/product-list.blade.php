@@ -24,9 +24,9 @@
 
     <div class="row mb-4">
         <div class="col-sm-12 col-md-12 col-lg-12 mt-2 d-flex justify-content-end border border-1 py-2">
-            <form action="#" method="post">
+            <form action="{{ route('checkout-product') }}" method="post">
                 @csrf
-                <input type="hidden" name="id_buku" value="">
+                <input type="hidden" name="id_product" value="">
                 <button class="btn btn-info btn-md ml-2" id="sendrequest">
                     Total Keranjang Belanja :
                     <span class="badge badge-light py-auto counterbadges" id="counterbadges">0</span>
@@ -83,7 +83,7 @@
         console.log(pinjaman);
     });
     $('#sendrequest').click(function() {
-        $('input:hidden[name=id_buku]').val(array_pinjaman);
+        $('input:hidden[name=id_product]').val(array_pinjaman);
     });
 </script>
 

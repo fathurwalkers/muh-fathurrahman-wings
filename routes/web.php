@@ -23,7 +23,8 @@ Route::group(['prefix' => '/', 'middleware' => 'cekloginclient'], function () {
     // DASHBOARD ROUTE
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/product-list', [HomeController::class, 'product_list'])->name('product-list');
-    Route::get('/checkout-product', [HomeController::class, 'checkout_product'])->name('checkout-product');
+    Route::post('/checkout-product', [HomeController::class, 'checkout_product'])->name('checkout-product');
+    Route::post('/proses-checkout/{product}', [HomeController::class, 'proses_checkout'])->name('proses-checkout');
 });
 
 Route::get('/generate-user', [GenerateController::class, 'generate_user'])->name('generate-user');
