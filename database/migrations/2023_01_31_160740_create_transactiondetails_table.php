@@ -14,10 +14,10 @@ class CreateTransactiondetailsTable extends Migration
             $table->string('document_code', 3)->nullable();
             $table->string('document_number', 10)->nullable();
             $table->string('product_code', 10)->nullable();
-            $table->integer('price', 6)->nullable()->unsigned();
-            $table->integer('quantity', 6)->nullable()->unsigned();
+            $table->integer('price')->nullable()->unsigned();
+            $table->integer('quantity')->nullable()->unsigned();
             $table->string('unit', 5)->nullable();
-            $table->integer('sub_total', 10)->nullable()->unsigned();
+            $table->integer('sub_total')->nullable()->unsigned();
             $table->string('currency', 5)->nullable();
 
             $table->unsignedBigInteger('product_id')->nullable();
